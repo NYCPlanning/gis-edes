@@ -44,6 +44,6 @@ arcpy, os, datetime, pandas, shutil, sys, traceback, configparser
 
 3.	Ensure that the configuration ini file is up-to-date with path variables. If any paths have changed since the time of this writing, those changes must be reflected in the ini file.
 
-4.	Run the script. It will create a new temporary directory on the user’s C: drive (C:\tempEDesig). Within this temporary directory a copy of the latest E-Designation text file, a file geodatabase, and shp/meta folders are generated.
+4.	Run the script. It will create a new temporary directory. Within this temporary directory a copy of the latest E-Designation text file, a file geodatabase, and shp/meta folders are generated.
 
 5.	After processing is finished, the temporary file geodatabase will have the new e designation feature class using the following naming convention **nyedes\_{date\_script\_was_run}**. The shp temporary directory will also hold a copy of the new e designation data set in shapefile format with the same naming convention.

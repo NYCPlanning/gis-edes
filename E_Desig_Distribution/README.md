@@ -24,10 +24,10 @@ arcpy, xml, os, datetime, shutil, ConfigParser, traceback, sys
 
 3.	 Run the script. It will process the following steps:
 
-  1.	In M:\GIS\BytesProduction\E_Des, if no corresponding directory exists, creates new directory to hold release files. Directory name follows YYYYMMDD naming standard.
+  1.	In M drive directory, if no corresponding directory exists, creates new directory to hold release files. Directory name follows YYYYMMDD naming standard.
   
   2.	Within newly created directory, copies original E_Desig text file, generates shp and meta directories, and populates these directories with requisite files from the temporary directory generated with the first script.
   
   3.	An E Designation feature class will also be copied from the temporary geodatabase to SDE PROD. If no E Designation feature class exists on SDE PROD currently, the naming convention for the feature class will match DCP_EARD_Edesignations. If a previous E Designation feature class exists on SDE PROD, the naming convention for the feature class will match DCP_EARD_Edesignations_{date_script_was_run}.
   
-  4.	Layer metadata will be replaced for both M:\GIS\DATA\Zoning\Environmental designation.lyr.xml and M:\GIS\DATA\BYTES of the BIG APPLE\Zoning Related\Environmental designation.lyr.xml
+  4.	Layer metadata will be replaced for both M drive layer directories

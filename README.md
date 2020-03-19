@@ -50,7 +50,7 @@ arcpy, xml, os, datetime, shutil, ConfigParser, traceback, sys
 
 3.	Ensure that the configuration ini file is up-to-date with path variables. If any paths have changed since the time of this writing, those changes must be reflected in the ini file.
 
-4.	Run the script. It will create a new temporary directory on the user’s C: drive (C:\tempEDesig). Within this temporary directory a copy of the latest E-Designation text file, a file geodatabase, and shp/meta folders are generated.
+4.	Run the script. It will create a new temporary directory. Within this temporary directory a copy of the latest E-Designation text file, a file geodatabase, and shp/meta folders are generated.
 
 5.	After processing is finished, the temporary file geodatabase will have the new e designation feature class using the following naming convention **nyedes\_{date\_script\_was_run}**. The shp temporary directory will also hold a copy of the new e designation data set in shapefile format with the same naming convention.
 
@@ -62,10 +62,10 @@ arcpy, xml, os, datetime, shutil, ConfigParser, traceback, sys
 
 3.	 Run the script. It will process the following steps:
 
-  1.	In M:\GIS\BytesProduction\E_Des, if no corresponding directory exists, creates new directory to hold release files. Directory name follows YYYYMMDD naming standard.
+  1.	In E_Des directory, if no corresponding directory exists, creates new directory to hold release files. Directory name follows YYYYMMDD naming standard.
   
   2.	Within newly created directory, copies original E_Desig text file, generates shp and meta directories, and populates these directories with requisite files from the temporary directory generated with the first script.
   
   3.	An E Designation feature class will also be copied from the temporary geodatabase to SDE PROD. If no E Designation feature class exists on SDE PROD currently, the naming convention for the feature class will match DCP_EARD_Edesignations. If a previous E Designation feature class exists on SDE PROD, the naming convention for the feature class will match DCP_EARD_Edesignations_{date_script_was_run}.
   
-  4.	Layer metadata will be replaced for both M:\GIS\DATA\Zoning\Environmental designation.lyr.xml and M:\GIS\DATA\BYTES of the BIG APPLE\Zoning Related\Environmental designation.lyr.xml
+  4.	Layer metadata will be replaced for both M drive layer directories
